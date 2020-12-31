@@ -1,8 +1,8 @@
 <?php
 
-class Murid_model extends CI_Model
+class Students_model extends CI_Model
 {
-    private $_table = "murid";
+    private $_table = "students";
 
     public function viewMurid()
     {
@@ -13,8 +13,8 @@ class Murid_model extends CI_Model
     {
         $data = array(
             'nama' => $this->input->post('nama', true),
-            'nisn' => $this->input->post('nisn', true),
-            'kelas' => $this->input->post('kelas', true),
+            'nim' => $this->input->post('nim', true),
+            'fakultas' => $this->input->post('fakultas', true),
             'alamat' => $this->input->post('alamat', true)
         );
 
@@ -36,10 +36,10 @@ class Murid_model extends CI_Model
     public function ubahMurid()
     {
         $data = array(
-            'nama' => $this->input->post('nama'),
-            'nisn' => $this->input->post('nisn'),
-            'kelas' => $this->input->post('kelas'),
-            'alamat' => $this->input->post('alamat')
+            'nama' => $this->input->post('nama', true),
+            'nim' => $this->input->post('nim', true),
+            'fakultas' => $this->input->post('fakultas', true),
+            'alamat' => $this->input->post('alamat', true),
         );
 
         //cari id berdasarkan id yang ada dalam inputan
